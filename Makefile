@@ -15,3 +15,9 @@ bootblock: bootload.S
 	$(OBJCOPY) -S -O binary -j .text bootblock.o bootblock	
 	./sign.pl bootblock
 
+clean:
+	rm bootblock
+	rm fd.img
+	rm *.o
+	rm *.d
+
